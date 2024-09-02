@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:new_ui/components/chip.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -55,24 +56,17 @@ class ProfileScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Row(
-                    children: [
-                      Icon(Icons.location_on, color: Colors.black45),
-                      SizedBox(width: 8),
-                      Text('Mannheim, Germany'),
-                    ],
+                  CustomChip(
+                    icon: Icon(Icons.location_on, color: Colors.black45),
+                    label: 'Mannheim Germany',
                   ),
                   SizedBox(
                     width: 12,
                   ),
-                  Row(
-                    children: [
-                      Icon(Icons.star_border_purple500_sharp,
-                          color: Colors.black45),
-                      SizedBox(width: 8),
-                      Text('Mannheim, Germany'),
-                    ],
-                  )
+                  CustomChip(
+                    icon: Icon(Icons.ac_unit_outlined, color: Colors.black45),
+                    label: 'Mannheim Nio',
+                  ),
                 ],
               )
             ],
